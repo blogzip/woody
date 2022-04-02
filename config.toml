@@ -1,4 +1,5 @@
 baseURL = 'https://woody.blogzip.net/'
+# baseURL = 'http://localhost:1313/'
 defaultContentLanguage = "en"
 languageCode = 'en'
 title = 'jinWoo dadDy blog'
