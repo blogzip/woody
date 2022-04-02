@@ -1,7 +1,7 @@
 baseURL = 'https://woody.blogzip.net/'
 defaultContentLanguage = "en"
 languageCode = 'en'
-title = 'jinWoo daDy blog'
+title = 'jinWoo dadDy blog'
 
 theme = "DoIt"
 
