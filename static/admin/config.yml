@@ -1,3 +1,5 @@
+#backend:
+#  name: git-gateway
 backend:
   name: github
   repo: blogzip/woody
@@ -6,7 +8,7 @@ backend:
 locale: 'ko'
 site_url: https://woody.blogzip.net
 #site_url: http://localhost:1313
-#local_backend: true
+local_backend: true
 
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
@@ -20,9 +22,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
-#      - {label: "LastMod", name: "lastmod", widget: "datetime"}
-#      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-#      - {label: "Publish Date", name: "date", widget: "datetime"}
-#      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-#      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "select", options: ["끄적끄적","일상&육아","책&영화","Dev&Ops","DeepLearning"], multiple: true, default: ["끄적끄적"] }
+      - {label: "Categories", name: "categories", widget: "select", options: ["끄적끄적","일상&육아","책&영화","Dev&Ops","DeepLearning"], multiple: true, default: ["끄적끄적"] }
+      - {label: "Series", name: "series", widget: "select", options: ["잡소리","추가예정","추가필요"], multiple: true, default: ["잡소리"] }
+      - {label: "Body", name: "body", widget: "markdown", default: "<!--more--> \\\n TODO"}
